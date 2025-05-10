@@ -1,4 +1,9 @@
 import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+
+
 import list1 from '../assets/list/1.jpg';
 import list2 from '../assets/list/2.jpg';
 import list3 from '../assets/list/3.jpg';
@@ -7,6 +12,8 @@ import host1 from '../assets/host/female1.jpg';
 import host2 from '../assets/host/female2.jpg';
 import host3 from '../assets/host/female3.jpg';
 import host4 from '../assets/host/female4.jpg';
+
+
 import { IoHeartCircleOutline } from "react-icons/io5";
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
 import { MdHotel } from "react-icons/md";
@@ -18,6 +25,7 @@ import { GiToaster } from "react-icons/gi";
 import { LuCircleParking } from "react-icons/lu";
 import { TbTeapot } from "react-icons/tb";
 import { useNavigate } from 'react-router-dom';
+
 
 const Contain = () => {
   const navigate = useNavigate();
@@ -41,7 +49,7 @@ const Contain = () => {
       {cards.map((card, index) => (
         <div
           key={index}
-          onClick={() => navigate(`/host/${index+1}`)}
+          onClick={() => navigate(`/host/${index + 1}`)}
           className="w-[500px] h-[470px] bg-white rounded-lg shadow-md overflow-hidden"
         >
           <div className="relative">

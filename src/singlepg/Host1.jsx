@@ -61,9 +61,9 @@ const Host1 = () => {
                     <h2 className="text-lg font-semibold">Hosted by Archana Dahal</h2>
                     <p className="text-sm text-gray-600 text-left">6 years of hosting</p>
                 </div>
-                <ul>
+                <ul className='text-sm text-left  pl-10'>
                     <li>Registered Date: 26 Magh, 2076</li>
-                    <li>DOB: 2</li>
+                    <li>DOB: 1999, Magh 30</li>
                 </ul>
                 <ul className="text-sm text-left list-disc pl-10">
                     <li>Belauri, Kanchanpur, Nepal</li>
@@ -93,10 +93,34 @@ const Host1 = () => {
                             </div>
                         ))}
                     </div>
-
-
                 </div>
             </div>
+            <hr className="my-4 w-1/2 border-t border-gray-300" />
+            <div className='text-left'>
+                <h2 className='text-left font-bold leading-relaxed text-lg'>What this place offers</h2>
+                <div className='grid grid-cols-4 gap-0'>
+                    <ul className='m-0 p-0'>
+                        <li>घर पालुवा जनावर</li>
+                        <li>पोखरी</li>
+                        <li>भाँडा माझ्ने</li>
+                        <li>केतली</li>
+                        <button className='border-spacing-1 shadow-md bg-gray-400 mt-2 rounded-lg p-2'>Show all 11 amenities</button>
+                    </ul>
+                    <ul className='m-0 p-0'>
+                        <li>टोस्टर</li>
+                        <li>पानि तताउने</li>
+                        <li>वासिंग मेसिन</li>
+                        <li>टिभी</li>
+                    </ul>
+                </div>
+            </div>
+            <hr className="my-4 w-1/2 border-t border-gray-300" />
+            <div className='text-left'>
+                <h1 className='text-lg font-bold'>Select the Booking Date</h1>
+                <p className='text-sm font-thin text-gray-400'>Opening time: 7AM TO 8PM</p>
+                Calender
+            </div>
+            <hr className="my-4 w-1/2 border-t border-gray-300" />
 
 
         </div>

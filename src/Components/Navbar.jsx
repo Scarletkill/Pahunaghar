@@ -10,10 +10,13 @@ const Navbar = () => {
                     <span className='text-base md:text-lg font-semibold'>पाहुनाघर</span>
                 </div>
                 <div className='flex space-x-7'>
-                    <h3 className='flex-shrink-0 px-2 text-base md:text-sm'>नयाँ ठाउँ</h3>
-                    <h3 className='flex-shrink-0 px-2 text-base md:text-sm'>गृहपृष्ठ</h3>
-                    <h3 className='flex-shrink-0 px-2 text-base md:text-sm'>अनुभवहरू</h3>
-                    <h3 className='flex-shrink-0 px-2 text-base md:text-sm'>प्रतिक्रिया</h3>
+                    <h3 className='flex-shrink-0 px-2 text-base md:text-sm'>पाहुनाघर</h3>
+                    <h3 className='flex-shrink-0 px-2 text-base md:text-sm'>कसरी काम गर्दछ?</h3>
+                    <h3 className='flex-shrink-0 px-2 text-base md:text-sm'>हाम्रो बारेमा</h3>
+                    <h3 className='flex-shrink-0 px-2 text-base md:text-sm'>ब्लग</h3>
+                    <h3 className='flex-shrink-0 px-2 text-base md:text-sm'>प्रश्नोतर</h3>
+                    <h3 className='flex-shrink-0 px-2 text-base md:text-sm'>होम</h3>
+
                 </div>
             </div>
         </div>
