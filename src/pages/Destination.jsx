@@ -8,9 +8,10 @@ import taplejung from '../assets/places/taplejung.jpg'; // Assuming this exists
 
 const Destination = () => {
     return (
-        <div className="mt-6 text-3xl text-black font-bold">
-            लोकप्रिय गन्तव्यहरू
-            <div className="grid grid-cols-3 grid-rows-2 gap-6 h-[700px] m-6 border-spacing-6 p-16 ">
+        <div className="mt-6 text-black font-bold text-center">
+            <h3 className='text-[50px]'>लोकप्रिय गन्तव्यहरू</h3>
+            <p className='text-[30px] font-normal mt-4'>नेपालमा लुकेका कुनाहरू अवलोकन गर्नुहोस् । #Freedom of Living.</p>
+            <div className="grid grid-cols-3 grid-rows-2 gap-6 h-[700px] m-6 mt-5 border-spacing-6 p-16 ">
                 {/* Top-left (लेटाङ) */}
                 <div className="relative row-span-1 col-span-2 transition-transform duration-300 transform hover:scale-105">
                     <img

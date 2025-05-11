@@ -41,7 +41,7 @@ const icons = [
 
 const Middle = () => {
     return (
-        <div className='mt-[100px] flex items-center w-9/10 mx-auto gap-[4rem]'>
+        <div className='mt-[150px] flex items-center w-16/17 mx-auto gap-[4rem] px-[70px]'>
             <div className='relative w-2/3 px-4'>
                 <Swiper
                     spaceBetween={4}
@@ -78,6 +78,11 @@ const Middle = () => {
                 <LuListFilter className='text-lg' />
                 Filter
             </button>
+            <div>
+                <p>
+
+                </p>
+            </div>
 
         </div>
     );

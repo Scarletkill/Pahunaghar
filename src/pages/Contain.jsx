@@ -45,7 +45,7 @@ const Contain = () => {
   ]
 
   return (
-    <div className="flex justify-start gap-8 mt-3">
+    <div className="flex justify-start gap-8 mt-10">
       {cards.map((card, index) => (
         <div
           key={index}
@@ -65,7 +65,7 @@ const Contain = () => {
               <IoHeartCircleOutline className='rounded-lg hover:bg-pink-400 transition-all' />
             </button>
           </div>
-          <div className="p-4 flex items-center gap-3">
+          <div className="p-4 flex items-center gap-3 cursor-pointer">
             <img
               src={hosts[index].image}
               alt={`hosts-${index}`}
