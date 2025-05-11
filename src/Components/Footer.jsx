@@ -1,31 +1,34 @@
-import React from 'react'
+import React from 'react';
+import sfooter from '../assets/sfooter.png';
 
 const Footer = () => {
     return (
-        <div className='bg-gray-400 w-full mt-4'>
-            <div className='text-black text-left text-lg grid-cols-1 grid-rows-1'>
-                Support
+        <div className='mt-4'>
+            <div className='text-black text-left text-lg'>
+                <p>Support</p>
                 <ul className='text-black font-normal'>
-                    <li className='grid-rows-2'>
-                        Contact
-                    </li>
-                    <li className='grid-rows-3'>
-                        Help
-                    </li>
-                    <li className='grid-rows-4'>
-                        Issue
-                    </li>
+                    <li>Contact</li>
+                    <li>Help</li>
+                    <li>Issue</li>
                 </ul>
+                <p>Hosting</p>
             </div>
-            <div className='text-black text-left text-lg grid-cols-2'>
-                Hosting
+
+            {/* Full-width footer image */}
+            <div className='w-full'>
+                <img
+                    src={sfooter}
+                    alt='footerimg'
+                    className='mt-2 w-full h-auto object-cover'
+                />
             </div>
+
             <hr className="my-4 border-t border-black" />
             <div className='text-left mt-3'>
                 copyright pahunaghar
             </div>
         </div>
-    )
+    );
 }
 
-export default Footer
+export default Footer;

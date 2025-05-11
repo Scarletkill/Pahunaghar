@@ -11,7 +11,7 @@ const Home = () => {
     // const [whatDowndrop, setwhatDowndrop] = useState(false);
 
     return (
-        <div className='absolute top-0 left-0'>
+        <div className='relative w-full'>
             <img src={Nepal} alt='herophoto' className=' w-screen h-[80vh] object-cover object-top' />
             <div className='absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white px-4 py-2 flex justify-between items-center text-sm'>
                 <p className="font-thin">

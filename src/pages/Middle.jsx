@@ -41,7 +41,7 @@ const icons = [
 
 const Middle = () => {
     return (
-        <div className='pt-[37rem] flex items-center w-9/10 mx-auto gap-[4rem]'>
+        <div className='mt-[100px] flex items-center w-9/10 mx-auto gap-[4rem]'>
             <div className='relative w-2/3 px-4'>
                 <Swiper
                     spaceBetween={4}
