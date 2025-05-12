@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import icon1 from '../assets/icon.png';
 
 const Navbar = () => {
@@ -10,12 +11,16 @@ const Navbar = () => {
                     <span className='text-base md:text-lg font-semibold'>पाहुनाघर</span>
                 </div>
                 <div className='flex space-x-7'>
-                    <h3 className='flex-shrink-0 px-2 text-base md:text-sm'>पाहुनाघर</h3>
-                    <h3 className='flex-shrink-0 px-2 text-base md:text-sm'>कसरी काम गर्दछ?</h3>
-                    <h3 className='flex-shrink-0 px-2 text-base md:text-sm'>हाम्रो बारेमा</h3>
-                    <h3 className='flex-shrink-0 px-2 text-base md:text-sm'>ब्लग</h3>
-                    <h3 className='flex-shrink-0 px-2 text-base md:text-sm'>प्रश्नोतर</h3>
-                    <h3 className='flex-shrink-0 px-2 text-base md:text-sm'>होम</h3>
+                    <Link to='/'>
+                        <button className='flex-shrink-0 px-2 text-base md:text-sm'>
+                            पाहुनाघर</button>
+                    </Link>
+
+                    <button className='flex-shrink-0 px-2 text-base md:text-sm'>कसरी काम गर्दछ?</button>
+                    <button className='flex-shrink-0 px-2 text-base md:text-sm'>हाम्रो बारेमा</button>
+                    <button className='flex-shrink-0 px-2 text-base md:text-sm'>ब्लग</button>
+                    <button className='flex-shrink-0 px-2 text-base md:text-sm'>प्रश्नोतर</button>
+                    <button className='flex-shrink-0 px-2 text-base md:text-sm'>होम</button>
 
                 </div>
             </div>

@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 
-import { FaCircleChevronRight, FaCircleChevronLeft } from "react-icons/fa6";
-import { LuListFilter } from "react-icons/lu";
+import { FaCircleChevronRight, FaCircleChevronLeft } from 'react-icons/fa6';
+import { LuListFilter } from 'react-icons/lu';
 
-// Import your images
 import Achamaghar from '../assets/icons/achammako-ghar.png';
 import bhansaghar from '../assets/icons/bhansa-ghar.png';
 import chalchitra from '../assets/icons/chalchitra-ghar.png';
@@ -24,10 +23,10 @@ import maha from '../assets/icons/maha-ghar.png';
 
 const icons = [
     { src: charaghar, title: 'चरा घर' },
-    { src: kaala, title: 'kala ghar' },
-    { src: chitra, title: 'chitra ghar' },
+    { src: kaala, title: 'कला घर' },
+    { src: chitra, title: 'चित्र घर' },
     { src: sangit, title: 'संगीत घर' },
-    { src: sapana, title: ' सपना घर' },
+    { src: sapana, title: 'सपना घर' },
     { src: dinner, title: 'डिनर घर' },
     { src: Achamaghar, title: 'अचम्म घर' },
     { src: khaja, title: 'खाजा घर' },
@@ -40,50 +39,67 @@ const icons = [
 ];
 
 const Middle = () => {
+    const prevRef = useRef(null);
+    const nextRef = useRef(null);
+    const swiperRef = useRef(null);
+
+    useEffect(() => {
+        if (
+            swiperRef.current &&
+            swiperRef.current.params &&
+            swiperRef.current.params.navigation
+        ) {
+            swiperRef.current.params.navigation.prevEl = prevRef.current;
+            swiperRef.current.params.navigation.nextEl = nextRef.current;
+            swiperRef.current.navigation.init();
+            swiperRef.current.navigation.update();
+        }
+    }, []);
+
     return (
-        <div className='mt-[150px] flex items-center w-16/17 mx-auto gap-[4rem] px-[70px]'>
-            <div className='relative w-2/3 px-4'>
+        <div className="mt-36 flex items-center justify-between max-w-7xl mx-auto gap-16 px-10">
+            <div className="relative w-full max-w-5xl">
                 <Swiper
-                    spaceBetween={4}
+                    spaceBetween={12}
                     slidesPerView={7}
                     modules={[Navigation]}
-                    navigation={{
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    }}>
-
+                    onSwiper={(swiper) => {
+                        swiperRef.current = swiper;
+                    }}
+                >
                     {icons.map((icon, index) => (
                         <SwiperSlide key={index}>
-                            <div className='flex flex-col items-center gap-1'>
+                            <div className="flex flex-col items-center gap-2">
                                 <img
                                     src={icon.src}
                                     alt={icon.title}
-                                    className='w-6 h-6 object-contain grayscale-[100]'
+                                    className="w-10 h-10 object-contain grayscale hover:grayscale-0 transition duration-300"
                                 />
-                                <p className="text-black text-sm mt-2">{icon.title}</p>
+                                <p className="text-sm text-black text-center">{icon.title}</p>
                             </div>
                         </SwiperSlide>
                     ))}
                 </Swiper>
-                {/* Custom Arrows */}
-                <div className='swiper-button-prev absolute left-0 top-4 -translate-y-1/2 text-2xl z-10 cursor-pointer text-gray-600 hover:text-black'>
+
+                {/* Navigation Buttons */}
+                <button
+                    ref={prevRef}
+                    className="absolute -left-6 top-1/2 -translate-y-1/2 z-10 text-2xl text-gray-600 hover:text-black"
+                >
                     <FaCircleChevronLeft />
-                </div>
-                <div className='swiper-button-next absolute right-0 top-4 -translate-y-1/2 text-2xl z-10 cursor-pointer text-gray-600 hover:text-black'>
+                </button>
+                <button
+                    ref={nextRef}
+                    className="absolute -right-6 top-1/2 -translate-y-1/2 z-10 text-2xl text-gray-600 hover:text-black"
+                >
                     <FaCircleChevronRight />
-                </div>
-
+                </button>
             </div>
-            <button className='flex items-center gap-2 mb-3 p-2 px-4 rounded-xl whitespace-nowrap border border-black shadow-sm transition-all duration-200 hover:bg-gray-400 hover:scale-105'>
-                <LuListFilter className='text-lg' />
-                Filter
+
+            <button className="flex items-center gap-2 px-4 py-2 border border-black rounded-xl shadow-sm transition-all hover:bg-gray-300 hover:scale-105">
+                <LuListFilter className="text-lg" />
+                <span>Filter</span>
             </button>
-            <div>
-                <p>
-
-                </p>
-            </div>
-
         </div>
     );
 };
