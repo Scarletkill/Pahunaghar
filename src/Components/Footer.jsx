@@ -4,8 +4,8 @@ import pahunagharlogo from '../assets/pahuna-ghar-logo_green.png';
 
 const Footer = () => {
     return (
-        <div className='mt-4 bg-gray-200'>
-            <div className='max-w-7xl mx-auto grid grid-cols-5 gap-6 p-6 text-gray-600 text-sm'>
+        <footer className='mt-4 bg-gray-200'>
+            <div className='container mx-auto grid grid-cols-5 gap-6 p-6 text-gray-600 text-sm'>
                 {/* Column 1 */}
                 <ul className='space-y-2'>
                     <li>ब्लग</li>
@@ -63,7 +63,7 @@ const Footer = () => {
                 <p>सर्बाधिकार सुरक्षित. © pahunaGhar™</p>
                 <p>श्रीयोग कन्सल्टिंग प्रा. लि. को सामाजिक पहल</p>
             </div>
-        </div>
+        </footer>
 
     );
 }
