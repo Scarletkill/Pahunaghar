@@ -5,7 +5,7 @@ import img2 from "../assets/places/pattharkot.jpg";
 import img3 from "../assets/places/hyatrung.jpg";
 import img4 from "../assets/places/belauri.jpg";
 
-import hostimg from "../assets/host/archana-dahal.jpg";
+import hosting from "../assets/host/archana-dahal.jpg";
 import helper from "../assets/host/female1.jpg";
 import helper1 from "../assets/host/female2.jpg";
 import helper2 from "../assets/host/female3.jpg";
@@ -26,7 +26,7 @@ const Host1 = () => {
   };
 
   return (
-    <div className="container mx-auto pt-[5.5rem] relative md:px-6">
+    <div className="container mx-auto pt-[5.5rem] relative md:px-8">
       {showModal && <Modal setShowModal={setShowModal} showModal={showModal} />}
       <h2 className=" flex left-2 font-bold text-3xl py-2">
         भान्छा घर ~ पाहुनाको सेवा, हाम्रो धर्म।
@@ -83,7 +83,7 @@ const Host1 = () => {
       <hr className="my-4 border-t border-gray-300 " />
       <div className="flex items-center gap-4 p-4">
         <img
-          src={hostimg}
+          src={hosting}
           alt="profile of host"
           className="w-16 h-16 rounded-full object-cover"
         />
