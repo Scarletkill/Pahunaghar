@@ -13,12 +13,12 @@ const Home = () => {
     console.log(data);
     reset();
   };
-  console.log(errors);
+
   return (
     <div className="relative w-full">
       <img
         src={Nepal}
-        alt="herophoto"
+        alt="heroPhoto"
         className=" w-screen h-[80vh] object-cover object-top"
       />
       <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white px-4 py-2 flex justify-between items-center text-sm">
@@ -37,12 +37,12 @@ const Home = () => {
               type="text"
               placeholder="के खोज्दै हुनु हुन्छ ?"
               className="flex-1 outline-none bg-transparent text-black placeholder-gray-500 px-4"
-              {...register("word", { required: "Email Address is required" })}
+              {...register("whatYouLookingFor", { required: "खोज्दै हुनु हुन्छ" })}
             />
           </div>
           <div className="px-4">
             <select
-              {...register("mobile", { required: "Email Address is required" })}
+              {...register("place", { required: "खोज्दै हुनु हुन्छ" })}
               className="w-full p-0.5 bg-white bg-opacity-80 text-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"
             >
               <option value="">कहाँ खोज्दै हुनु हुन्छ ?</option>
@@ -55,15 +55,15 @@ const Home = () => {
           </div>
           <div className="px-4">
             <select
-              {...register("place", { required: "Email Address is required" })}
+              {...register("type", { required: "पाहुनाघरको प्रकार" })}
               className="w-full p-0.5 bg-white bg-opacity-80 text-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"
             >
-              <option value="">कहाँ खोज्दै हुनु हुन्छ ?</option>
-              <option value="लेटांग">लेटांग</option>
-              <option value="ताप्लेजुंग">ताप्लेजुंग</option>
-              <option value="दोधारा चाँदनी">दोधारा चाँदनी</option>
-              <option value="जेफाले">जेफाले</option>
-              <option value="ईलाम">ईलाम</option>
+              <option value="">पाहुनाघरको प्रकार</option>
+              <option value="पाहुनाघर">पाहुनाघर</option>
+              <option value="मामाघर">मामाघर</option>
+              <option value="ढिकी घर">ढिकी घर</option>
+              <option value="फारमघर">फारमघर</option>
+              <option value="संबाद घर">संबाद घर</option>
             </select>
           </div>
 
@@ -76,9 +76,9 @@ const Home = () => {
           </button>
         </form>
         <div className="mt-2 text-red-500 text-sm flex max-w-5xl gap-12 container mx-auto px-8 items-center text-center">
-          <div className="w-1/4">{errors?.word?.message}</div>
-          <div className="w-1/4">{errors?.mobile?.message}</div>
+          <div className="w-1/4">{errors?.whatYouLookingFor?.message}</div>
           <div className="w-1/4">{errors?.place?.message}</div>
+          <div className="w-1/4">{errors?.type?.message}</div>
         </div>
       </div>
     </div>
