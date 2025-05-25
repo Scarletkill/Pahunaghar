@@ -9,9 +9,16 @@ import female1 from '../assets/testimonials/1.jpg';
 import female2 from '../assets/testimonials/2.jpg';
 import female3 from '../assets/testimonials/3.jpg';
 
+import blog3 from '../assets/blog/feel-the-culture.jpg';
+import blog1 from '../assets/blog/ginger-garlic.jpg';
+import blog2 from '../assets/blog/gharelu-utpaadan.jpg';
+
 
 import { FaHandPointRight } from "react-icons/fa";
 import { BsQuote } from "react-icons/bs";
+import { IoStar } from "react-icons/io5";
+import { IoStarOutline } from "react-icons/io5";
+
 
 const destinations = [
     { src: jhorahat, title: 'लेटाङ', guest: '२३ पाहुनाघर', span: 2, row: 1 },
@@ -26,6 +33,12 @@ const testimonials = [
     { src: female3, Name: 'राम प्रसाद अधिकारी', address: 'भोजपुर', review: 'घुमफिर भन्नाले मन पर्ने स्थानमा पुग्ने स्वतन्त्रता हो, प्रत्येक ठाउँमा पाहुनाघर भएमा सबैले सजिलै जानकारी लिई जुनसुकै ठाउँमा पुग्न सक्छन्, जसले पर्यटन बृद्धि गर्छ।' },
 
 ];
+
+const blog = [
+    { src: blog3, alt: "culture", topic: "ब्लग", text1: "पाहुनाघर कसरी सुरु गर्ने?", text2: "२१ फाल्गुन २०७७", col: 2, span: 2 },
+    { src: blog1, alt: "ahchar", topic: "रेसिपी", text1: "उधमशील बनाउदै : पाहुनाघर सन्चालन तयारी", text2: "१७ फाल्गुन २०७७", col: 3, span: 1 },
+    { src: blog2, alt: "ghareluutpaadan", topic: "यात्रा", text1: "लसुन र अदुवाको अचार", text2: "९ फाल्गुन २०७७", col: 3, span: 1 }
+]
 
 const Destination = () => {
     const [hoverIndex, setHoverIndex] = useState(null);
@@ -90,9 +103,45 @@ const Destination = () => {
                             <BsQuote className="text-xl text-black" />
                             {review.review}
                         </p>
+                        <ul class="flex gap-2 mt-2">
+                            <li><IoStar /></li>
+                            <li><IoStar /></li>
+                            <li><IoStar /></li>
+                            <li><IoStar /></li>
+                            <li><IoStarOutline /></li>
+                        </ul>
 
                     </div>
                 ))}
+            </div>
+            <div className='mt-12'>
+                <div className='text-center'>
+                    <h3 className='text-[50px]  font-bold'>पाहुनाघरमा प्रमुख गन्तव्य</h3>
+                </div>
+                <div className='grid grid-cols-3 grid-rows-1 gap-6 h-[700px] m-10 mt-2 border-spacing-6 p-20'>
+                    {blog.map((blog, index) => (
+                        <div
+                            key={index}
+                            className={`relative col-span-${blog.col} row-span-${blog.span} transition-transform duration-300 transform hover:scale-105`}
+                            onMouseEnter={() => setHoverIndex(index)}
+                            onMouseLeave={() => setHoverIndex(null)}
+                        >
+                            <img
+                                src={blog.src}
+                                alt={blog.alt}
+                                className="w-full h-full object-cover rounded-lg"
+                            />
+                            <div className=' absolute text-left px-4 bottom-4'>
+                                <button className='absolute p-2 bg-green-400 text-sm font-thin px-4 bottom-14 rounded-lg'>{blog.topic}</button>
+                                <h3 className='text-black text-[15px] font-semibold hover:underline transition ease-in-out duration-300 cursor-pointer'>{blog.text1}</h3>
+                                <p className='text-gray-600 text-sm font-thin'>{blog.text2}</p>
+                            </div>
+                        </div>
+
+
+                    ))}
+
+                </div>
             </div>
 
         </div>

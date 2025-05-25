@@ -4,7 +4,6 @@ import { Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home.jsx';
 import Navbar from './Components/Navbar.jsx';
-import Example from './singlepg/Calender.jsx';
 import Middle from './pages/Middle.jsx';
 import Contain from './pages/Contain.jsx';
 import Destination from './pages/Destination.jsx';
@@ -25,7 +24,6 @@ function App() {
           </>
         } />
         <Route path='/host/1' element={<Host1 />} />
-        <Route path='/calendar' element={<Example />} />
       </Routes>
       <Footer />
     </>
